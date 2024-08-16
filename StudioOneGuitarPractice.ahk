@@ -25,11 +25,16 @@ Backspace::
 
 \::
 ; BPMを-10%にします
+; ショートカットキー（ここでは\）はお好きなキーに変更してください
 {
     global BPMNumber
     Send "0"
     Sleep 5
     Click 1450, 950
+    ; この1450, 950は画面上の座標を表しています
+    ; click 1450, 950は画面下部のテンポの数字をクリックして文字入力状態しています
+    ; 各自のディスプレイにおける適切な座標を指定してください
+    ; 座標を確認するには、Window Spy(Autohotkey Dashから起動できる）が便利です
     BPMNumber -= 1
     Send BPMArray[BPMNumber]
     Send "{Enter}"
